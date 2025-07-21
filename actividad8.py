@@ -7,9 +7,9 @@ def factorial(numero):
 
 def suma_numeros(numero2):
     if numero2 ==0:
-        return
+        return 0
     else:
-        return numero + suma_numeros(numero2)
+        return numero2 + suma_numeros(numero2-2)
 opcion = 0
 while opcion != 7:
     print("[1] Calcular el factorial")
@@ -31,8 +31,8 @@ while opcion != 7:
                 else:
                     print(factorial(numero))
             case 2:
-                numero = int(input("Ingrese un numero entero positivo: "))
-                if numero < 0:
+                numero2 = int(input("Ingrese un numero entero positivo: "))
+                if numero2 < 0:
                     print("Ingreso un dato incorrecto")
                 else:
-                    print(suma_numeros(numero))
+                    print(suma_numeros(numero2))
