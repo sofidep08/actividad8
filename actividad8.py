@@ -10,6 +10,12 @@ def suma_numeros(numero2):
         return 0
     else:
         return numero2 + suma_numeros(numero2-2)
+
+def fibonacci(numero3):
+    if numero3 == 0:
+        return 1
+    else:
+        return numero3 + fibonacci(numero3-1)
 opcion = 0
 while opcion != 7:
     print("[1] Calcular el factorial")
@@ -36,3 +42,9 @@ while opcion != 7:
                     print("Ingreso un dato incorrecto")
                 else:
                     print(suma_numeros(numero2))
+            case 3:
+                numero3 = int(input("Ingrese un numero entero positivo: "))
+                if numero3 < 0:
+                    print("Ingreso un dato incorrecto")
+                else:
+                    print(fibonacci(numero3))
