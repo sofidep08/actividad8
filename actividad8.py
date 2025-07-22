@@ -27,6 +27,12 @@ def potencia(base, exponente):
         return 1
     else:
         return base * exponente
+def invertir_cadena(cadena):
+    if len(cadena) == 0:
+        return "vacio"
+    else:
+        return cadena[-1] + invertir_cadena(cadena[:-1])
+
 opcion = 0
 while opcion != 7:
     print("[1] Calcular el factorial")
@@ -62,11 +68,12 @@ while opcion != 7:
             case 4:
                 palabra = input("Ingrese una palabra: ")
                 letra = input("Ingrese la letra que deseas contar: ")
-
                 cantidad = contar_letra(palabra, letra)
                 print(f"La letra {letra} aparece {cantidad} en la palabra {palabra}")
-
-
+            case 5:
+                texto = input("Ingrese un texto o palabra: ")
+                texto_invertido = invertir_cadena(texto)
+                print("Texto o palabra invertida:", texto_invertido)
             case 6:
                 base = int(input("Ingrese un numero entero positivo: "))
                 exponente = int(input("Ingrese un numero entero positivo: "))
