@@ -17,7 +17,11 @@ def fibonacci(numero3):
         return 1
     else:
         return fibonacci(numero3-1) + fibonacci(numero3-2)
-
+def contar_letra(palabra, letra):
+    if len(palabra) == 0:
+        return 0
+    else:
+        return (1 if palabra[0] == letra else 0) + contar_letra(palabra[1:], letra)
 
 opcion = 0
 while opcion != 7:
@@ -51,3 +55,9 @@ while opcion != 7:
                     print("Ingreso un dato incorrecto")
                 else:
                     print(fibonacci(numero3))
+            case 4:
+                palabra = input("Ingrese una palabra: ")
+                letra = input("Ingrese la letra que deseas contar: ")
+
+                cantidad = contar_letra(palabra, letra)
+                print(f"La letra {letra} aparece {cantidad} en la palabra {palabra}")
