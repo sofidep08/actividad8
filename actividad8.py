@@ -78,3 +78,5 @@ while opcion != 7:
                 base = int(input("Ingrese un numero entero positivo: "))
                 exponente = int(input("Ingrese un numero entero positivo: "))
                 print(potencia(base, exponente))
+            case 7:
+                print("SALIENDO DEL MENU....")
