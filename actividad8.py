@@ -10,12 +10,15 @@ def suma_numeros(numero2):
         return 0
     else:
         return numero2 + suma_numeros(numero2-2)
-
 def fibonacci(numero3):
-    if numero3 == 0:
+    if numero3 <= 0:
+        return 0
+    elif numero3 == 1:
         return 1
     else:
-        return numero3 + fibonacci(numero3-1)
+        return fibonacci(numero3-1) + fibonacci(numero3-2)
+
+
 opcion = 0
 while opcion != 7:
     print("[1] Calcular el factorial")
